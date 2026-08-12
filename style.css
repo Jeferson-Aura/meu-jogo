@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #202040, #080810);
+
+    color: white;
+    text-align: center;
+
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 25px 0 5px;
+
+    text-shadow:
+        0 0 20px #00ffff;
+}
+
+.subtitulo {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+#aura {
+    font-size: 38px;
+
+    color: #00ffff;
+
+    text-shadow:
+        0 0 15px #00ffff;
+
+    margin-bottom: 5px;
+}
+
+#nivel {
+    font-size: 22px;
+    margin: 10px;
+}
+
+.multiplicadores {
+    display: flex;
+
+    justify-content: center;
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin: 15px auto;
+}
+
+.multiplicadores div {
+    min-width: 130px;
+
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 10px;
+}
+
+.multiplicadores strong {
+    display: block;
+
+    color: #00ffff;
+
+    font-size: 20px;
+
+    margin-top: 4px;
+}
+
+/* BOTÃO DE AURA */
+
+#botaoAura {
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    border: 6px solid #00ffff;
+
+    background:
+        radial-gradient(
+            circle,
+            #303060,
+            #101020
+        );
+
+    color: white;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 50px #0088ff,
+        inset 0 0 30px #00ffff;
+
+    transition: 0.1s;
+}
+
+#botaoAura:hover {
+    transform: scale(1.05);
+}
+
+#botaoAura:active {
+    transform: scale(0.90);
+}
+
+/* PAINEL */
+
+.painel {
+    width: 700px;
+
+    max-width: 94%;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 30px rgba(0, 255, 255, 0.15);
+}
+
+.painel h2 {
+    text-shadow: 0 0 10px #00ffff;
+}
+
+/* ESTATÍSTICAS */
+
+.estatistica {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 12px;
+
+    padding: 10px;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    border-radius: 10px;
+}
+
+/* MELHORIAS */
+
+#melhorias {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+button {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 13px 20px;
+
+    margin: 6px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.upgrade {
+    background: #00ffff;
+    color: #001010;
+}
+
+.critico {
+    background: #ffcc00;
+    color: #111;
+}
+
+.poderoso {
+    background: #0088ff;
+    color: white;
+}
+
+.auto2 {
+    background: #a855f7;
+    color: white;
+}
+
+.turbo {
+    background: #ff6600;
+    color: white;
+}
+
+.multiplicadorUpgrade {
+    background: #00ff88;
+    color: #001010;
+}
+
+.dourada {
+    background: #ffd700;
+    color: #111;
+}
+
+.mega {
+    background: #ff44ff;
+    color: white;
+}
+
+.cosmica {
+    background: #6633ff;
+    color: white;
+}
+
+.upgrade small {
+    opacity: 0.8;
+}
+
+/* MENSAGEM */
+
+#mensagem {
+    margin: 15px;
+
+    color: #ffcc00;
+
+    min-height: 25px;
+
+    font-weight: bold;
+}
+
+/* RENASCIMENTO */
+
+.renascimento {
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(150, 0, 255, 0.15),
+            rgba(0, 255, 255, 0.08)
+        );
+
+    border: 1px solid rgba(180, 0, 255, 0.3);
+}
+
+.renascimento strong {
+    color: #00ffff;
+}
+
+.renascer {
+    background:
+        linear-gradient(
+            90deg,
+            #8b00ff,
+            #00ffff
+        );
+
+    color: white;
+
+    font-size: 20px;
+
+    padding: 15px 30px;
+
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* RESET */
+
+.reset {
+    background: #ff3333;
+
+    color: white;
+}
+
+.reset:hover {
+    box-shadow:
+        0 0 15px #ff3333;
+}
+
+/* AURA APARECENDO AO CLICAR */
+
+.pop {
+    position: fixed;
+
+    pointer-events: none;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #00ffff;
+
+    animation:
+        subir 0.8s forwards;
+
+    text-shadow:
+        0 0 10px #00ffff;
+}
+
+@keyframes subir {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-100px)
+            scale(1.2);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #aura {
+        font-size: 30px;
+    }
+
+    #botaoAura {
+        width: 210px;
+        height: 210px;
+
+        font-size: 26px;
+    }
+
+    #melhorias {
+        grid-template-columns: 1fr;
+    }
+
+    .painel {
+        padding: 15px;
+    }
+}
